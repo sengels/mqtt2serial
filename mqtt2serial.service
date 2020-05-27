@@ -1,0 +1,10 @@
+[Unit]
+Description=mqtt to serial daemon
+After=mosquitto.service
+
+[Service]
+ExecStart=/home/pi/mqtt2serial/mqtt2seriald.py start
+ExecStop=/home/pi/mqtt2serial/mqtt2seriald.py stop
+
+[Install]
+WantedBy=multi-user.target
