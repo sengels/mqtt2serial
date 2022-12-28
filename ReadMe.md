@@ -12,9 +12,12 @@ sudo apt install -y python3-paho-mqtt python3-lockfile python3-daemon python3-se
 * sudo touch /var/log/nagf2rpi/mqtt2serial.log
 * sudo touch /var/log/nagf2rpi/mqtt2seriald.log
 * sudo chmod 775 -R /var/log/nagf2rpi/
+* sudo mkdir /var/run/nagf2rpi
+* sudo chmod -R 777 /var/run/nagf2rpi
 * sudo chmod +x mqtt2seriald.py
-* sudo ln -s mqtt2serial.service /etc/systemd/system/mqtt2serial.service
+* sudo ln -s $HOME/mqtt2serial/mqtt2serial.service /etc/systemd/system/mqtt2serial.service
 * sudo systemctl daemon-reload
+* sudo systemctl enable mqtt2serial
 
 # License etc.
 There is limited use for this, thats why a permissive license. If it helps you I am glad too.

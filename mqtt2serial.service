@@ -1,10 +1,11 @@
 [Unit]
 Description=mqtt to serial daemon
 After=mosquitto.service
+RuntimeDirectory=nagf2rpi
 
 [Service]
-ExecStart=/home/pi/mqtt2serial/mqtt2seriald.py start
-ExecStop=/home/pi/mqtt2serial/mqtt2seriald.py stop
+ExecStart=/home/gartenbahn/mqtt2serial/mqtt2seriald.py start
+ExecStop=/home/gartenbahn/mqtt2serial/mqtt2seriald.py stop
 
 [Install]
 WantedBy=multi-user.target
